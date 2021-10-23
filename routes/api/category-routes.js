@@ -45,6 +45,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+   console.log('======================');
    // create a new category
    // Expects {category_name: 'Toys'}
    Category.create({ category_name: req.body.category_name })
@@ -56,6 +57,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
+   console.log('======================');
    // update a category by its `id` value
    Category.update({ category_name: req.body.category_name }, { where: { id: req.params.id } })
       .then((dbCategoryData) => {
@@ -72,6 +74,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+   console.log('======================');
    // delete a category by its `id` value
    Category.destroy({ where: { id: req.params.id } })
       .then((dbCategoryData) => {
