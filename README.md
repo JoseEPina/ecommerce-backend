@@ -88,6 +88,7 @@ Finally, the video demonstration will also show how [Insomnia Core](https://inso
 ## Output Example
 
 [Link to video on Google Drive, Part 1](https://watch.screencastify.com/v/rU2Lqqcpbyq8L8p9eLyo)
+
 [Link to video on Google Drive, Part 2](https://watch.screencastify.com/v/g3HkcJFfc9g33UfAD5dp)
 
 ## Project URLs
