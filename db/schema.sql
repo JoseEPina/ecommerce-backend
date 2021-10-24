@@ -1,3 +1,4 @@
+-- Initialization script to create Database
 -- DROP DATABASE
 DROP DATABASE IF EXISTS ecommerce_db;
 

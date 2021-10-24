@@ -1,8 +1,8 @@
-const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const router = require('express').Router(); // import Router
+const { Category, Product } = require('../../models'); // import models
 
-// The `/api/categories` endpoint
 
+// GET - the /api/categories - GET all categories endpoint
 router.get('/', (req, res) => {
    console.log('======================');
    // find all categories
@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
       });
 });
 
+// GET - the /api/categories/1 - GET category=1 endpoint
 router.get('/:id', (req, res) => {
    console.log('======================');
    // find one category by its `id` value
@@ -28,7 +29,7 @@ router.get('/:id', (req, res) => {
       where: { id: req.params.id },
       include: {
          model: Product,
-         attributes: ['id', 'product_name', 'price', 'stock'],
+         attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
       },
    })
       .then((dbCategoryData) => {
@@ -44,6 +45,7 @@ router.get('/:id', (req, res) => {
       });
 });
 
+// POST - the /api/categories - CREATE one new category endpoint
 router.post('/', (req, res) => {
    console.log('======================');
    // create a new category
@@ -56,6 +58,7 @@ router.post('/', (req, res) => {
       });
 });
 
+// PUT - the /api/categories/1 - UPDATE category=1 endpoint
 router.put('/:id', (req, res) => {
    console.log('======================');
    // update a category by its `id` value
@@ -73,6 +76,7 @@ router.put('/:id', (req, res) => {
       });
 });
 
+// DELETE - the /api/categories/1 - DELETE category=1 endpoint
 router.delete('/:id', (req, res) => {
    console.log('======================');
    // delete a category by its `id` value

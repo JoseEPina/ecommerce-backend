@@ -1,5 +1,6 @@
-const { Tag } = require('../models');
+const { Tag } = require('../models'); // import Tag Model
 
+// data to seed Tag Model
 const tagData = [
   {
     tag_name: 'rock music',
@@ -27,6 +28,8 @@ const tagData = [
   },
 ];
 
+// declares seedTags function that uses Sequelizer.Model.bulkCreate() method to
+// create table rows from tagData
 const seedTags = () => Tag.bulkCreate(tagData);
 
-module.exports = seedTags;
+module.exports = seedTags; // exports seedTags function

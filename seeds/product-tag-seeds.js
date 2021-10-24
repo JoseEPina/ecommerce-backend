@@ -1,5 +1,6 @@
-const { ProductTag } = require('../models');
+const { ProductTag } = require('../models'); // import ProductTag Model
 
+// data to seed ProductTag Model
 const productTagData = [
   {
     product_id: 1,
@@ -51,6 +52,8 @@ const productTagData = [
   },
 ];
 
+// declares seedProductTags function that uses Sequelizer.Model.bulkCreate() method to
+// create table rows from productTagData
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
-module.exports = seedProductTags;
+module.exports = seedProductTags; // exports seedPropductTags function
