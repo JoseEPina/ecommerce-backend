@@ -75,15 +75,13 @@ Finally, the video demonstration will also show how [Insomnia Core](https://inso
 
 3. Once you have successfully connected to MySQL, create the database by entering: _source db/schema.sql_
 
-4. Once that is complete, create the database tables by entering: _source db/schema.sql_
+4. Once that is complete, exit out of MySQL and in your terminal, seed the database tables by entering: _npm run seed_
 
-5. Once that is complete, exit out of MySQL and in your terminal, seed the database tables by entering: _npm run seed_
+5. Now run the application by entering: **_npm start_** in the terminal prompt, from your local main branch .
 
-6. Now run the application by entering: **_npm start_** in the terminal prompt, from your local main branch .
+6. You will want to make sure that your application is connected to the database using Sequelize.
 
-7. You will want to make sure that your application is connected to the database using Sequelize.
-
-8. Once your connection is established and the databased has been seeded, open up Insomnia Core to test API routes for GET, POST, PUT and DELETE.
+7. Once your connection is established and the databased has been seeded, open up Insomnia Core to test API routes for GET, POST, PUT and DELETE.
 
 ## Output Example
 
